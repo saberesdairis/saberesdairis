@@ -103,3 +103,22 @@ body {
   border-radius: 999px;
   text-decoration: none;
 }
+.secao {
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.secao h2 {
+  font-size: 2rem;
+  color: #8B5A5A;
+  margin-bottom: 1rem;
+}
+
+.secao p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
