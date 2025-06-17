@@ -122,3 +122,51 @@ body {
   margin-bottom: 1.5rem;
   line-height: 1.6;
 }
+.secao {
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.secao h2 {
+  color: #8B5A5A;
+  margin-bottom: 1rem;
+}
+
+.secao p,
+.secao ul,
+.secao form {
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.secao ul {
+  list-style: none;
+  padding: 0;
+}
+
+.secao ul li {
+  margin-bottom: 0.5rem;
+}
+
+.formulario input,
+.formulario textarea {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.formulario button {
+  background: linear-gradient(to right, #8B5A5A, #A67B5B);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
