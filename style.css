@@ -1,1 +1,45 @@
-body { font-family: sans-serif; background-color: #fdf6e3; }
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: linear-gradient(135deg, #f3f0ff, #fef7f0, #f0f9f0);
+}
+
+.topo {
+  background: #ffffffcc;
+  backdrop-filter: blur(6px);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 4px #0001;
+  z-index: 10;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #8B5A5A;
+}
+
+.menu a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #8B5A5A;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #A67B5B;
+}
+
+.botao-agendar {
+  background: linear-gradient(to right, #8B5A5A, #A67B5B);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  margin-left: 2rem;
+  font-weight: bold;
+}
