@@ -1,9 +1,10 @@
-
 body {
-  font-family: sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
   background: #fafafa;
+  color: #222;
+  line-height: 1.6;
 }
 
 header, footer {
@@ -13,10 +14,67 @@ header, footer {
   color: white;
 }
 
-.livro-digital {
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.menu a {
+  margin: 0 1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.botao-agendar {
+  background: white;
+  color: #7d5ca4;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  margin-left: 1rem;
+}
+
+.hero {
+  background: linear-gradient(to bottom, #ece7f6, #fafafa);
+  text-align: center;
   padding: 4rem 2rem;
+}
+
+.hero-logo {
+  max-width: 150px;
+  margin-bottom: 1rem;
+}
+
+.botao-hero {
+  background: #7d5ca4;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 1.5rem;
+}
+
+.secao {
+  padding: 3rem 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.servico {
+  margin-bottom: 1.5rem;
+}
+
+.programa-solidario {
+  font-style: italic;
+  color: #555;
+}
+
+.livro-digital {
   background: linear-gradient(to bottom, #fefefe, #ece7f6);
   text-align: center;
+  padding: 4rem 2rem;
 }
 
 .livro-capa {
@@ -40,4 +98,17 @@ header, footer {
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
+  margin-top: 1rem;
+}
+
+.rodape-menu a {
+  margin: 0 0.5rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.creditos {
+  margin-top: 1rem;
+  font-size: 0.9rem;
 }
