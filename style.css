@@ -27,11 +27,14 @@ header, footer {
 }
 
 .botao-agendar {
-  background: white;
+  background: #ffffff;
   color: #7d5ca4;
   padding: 0.5rem 1rem;
   border-radius: 6px;
-  margin-left: 1rem;
+  font-weight: bold;
+  border: none;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
 }
 
 .hero {
