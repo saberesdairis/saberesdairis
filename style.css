@@ -1,233 +1,43 @@
+
 body {
-  margin: 0;
   font-family: sans-serif;
-  background: linear-gradient(135deg, #f3f0ff, #fef7f0, #f0f9f0);
-}
-
-.topo {
-  background: #ffffffcc;
-  backdrop-filter: blur(6px);
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  box-shadow: 0 2px 4px #0001;
-  z-index: 10;
-}
-
-.logo {
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: #8B5A5A;
-}
-
-.menu a {
-  margin-left: 1rem;
-  text-decoration: none;
-  color: #8B5A5A;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.menu a:hover {
-  color: #A67B5B;
-}
-
-.botao-agendar {
-  background: linear-gradient(to right, #8B5A5A, #A67B5B);
-  color: white;
-  padding: 0.4rem 1rem;
-  border-radius: 999px;
-  margin-left: 2rem;
-  font-weight: bold;
-}
-.hero {
-  background-image: url('hero_background.jpg');
-  background-size: cover;
-  background-position: center;
-  padding: 6rem 2rem;
-  text-align: center;
-  color: #8B5A5A;
-  position: relative;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: #ffffffcc;
-  backdrop-filter: blur(3px);
-}
-
-.hero-conteudo {
-  position: relative;
-  max-width: 700px;
-  margin: 0 auto;
-  z-index: 1;
-}
-
-.hero-logo {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 0 10px #0003;
-  margin-bottom: 1rem;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  color: #8B5A5A;
-}
-
-.hero h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  color: #A67B5B;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  color: #444;
-  margin-bottom: 2rem;
-}
-
-.botao-hero {
-  background: linear-gradient(to right, #8B5A5A, #A67B5B);
-  color: white;
-  padding: 0.8rem 1.5rem;
-  font-weight: bold;
-  border-radius: 999px;
-  text-decoration: none;
-}
-.secao {
-  padding: 4rem 2rem;
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.secao h2 {
-  font-size: 2rem;
-  color: #8B5A5A;
-  margin-bottom: 1rem;
-}
-
-.secao p {
-  font-size: 1.1rem;
-  color: #444;
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
-}
-.secao {
-  padding: 4rem 2rem;
-  max-width: 800px;
-  margin: auto;
-}
-
-.secao h2 {
-  color: #8B5A5A;
-  margin-bottom: 1rem;
-}
-
-.secao p,
-.secao ul,
-.secao form {
-  color: #444;
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.secao ul {
-  list-style: none;
+  margin: 0;
   padding: 0;
+  background: #fafafa;
 }
 
-.secao ul li {
-  margin-bottom: 0.5rem;
-}
-
-.formulario input,
-.formulario textarea {
-  display: block;
-  width: 100%;
-  padding: 0.8rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-}
-
-.formulario button {
-  background: linear-gradient(to right, #8B5A5A, #A67B5B);
-  color: white;
-  padding: 0.8rem 1.5rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 999px;
-  cursor: pointer;
-}
-.formulario {
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  margin: 2rem auto;
-}
-
-.formulario input,
-.formulario textarea {
-  padding: 0.8rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-}
-
-.formulario button {
-  padding: 0.8rem;
-  background: linear-gradient(to right, #8B5A5A, #A67B5B);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.formulario button:hover {
-  background: #A67B5B;
-}
-
-.rodape {
-  background: #f8f4f0;
-  color: #8B5A5A;
-  padding: 2rem;
+header, footer {
   text-align: center;
-  font-size: 0.9rem;
-  border-top: 1px solid #ddd;
-  margin-top: 4rem;
+  padding: 2rem;
+  background: #7d5ca4;
+  color: white;
 }
 
-.rodape-menu {
-  margin: 1rem 0;
+.livro-digital {
+  padding: 4rem 2rem;
+  background: linear-gradient(to bottom, #fefefe, #ece7f6);
+  text-align: center;
 }
 
-.rodape-menu a {
-  margin: 0 0.5rem;
-  color: #8B5A5A;
-  text-decoration: none;
-  font-weight: 500;
+.livro-capa {
+  max-width: 220px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
 }
 
-.rodape-menu a:hover {
-  color: #A67B5B;
-}
-
-.creditos {
-  margin-top: 1rem;
+.sobre-livro {
   font-style: italic;
-  color: #A67B5B;
+  color: #444;
+  margin: 1rem auto;
+  max-width: 500px;
+}
+
+.botao-download {
+  display: inline-block;
+  background: #7d5ca4;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
 }
