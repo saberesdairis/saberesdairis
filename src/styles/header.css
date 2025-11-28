@@ -1,0 +1,215 @@
+/* ========================================
+   HEADER & NAVBAR
+   ======================================== */
+
+/* Keep header visible on scroll */
+header { 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000;
+}
+
+/* Navbar - consolidated styles */
+nav#navbar {
+	height:100px;
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	padding: 0 6%;
+	position: relative;  /* For absolute mobile menu positioning */
+	background: rgba(255,255,255,0.45);
+	backdrop-filter: blur(6px);
+	transition: background 220ms ease, box-shadow 220ms ease, transform 220ms ease;
+}
+
+/* when user scrolls, add subtle background and shadow for readability */
+header.scrolled nav#navbar {
+	background: rgba(255,255,255,0.98);
+	box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+#nav-left {
+	display:flex;
+	align-items:center;
+	gap:20px;
+}
+
+#nav-right {
+	display:flex;
+	gap:12px;
+	align-items:center;
+}
+
+/* primary nav list next to logo */
+#nav_list {
+	margin:0;
+	padding:0;
+	list-style: none;  /* Remove bullet points */
+	display:flex;
+	gap:22px;
+	align-items:center;
+}
+
+#nav_list .nav-item a {
+	display:inline-flex;
+	align-items:center;
+	height:auto;  /* Let it flex with content */
+	padding:8px 12px;
+	color:var(--brand);
+	font-weight:600;
+	text-decoration:none;
+	position: relative;
+	transition: color 0.3s ease;
+}
+
+/* Active nav item with underline */
+#nav_list .nav-item.active a {
+	color: #7a3f3f;
+}
+
+#nav_list .nav-item.active a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 12px;
+	right: 12px;
+	height: 2px;
+	background-color: var(--brand);
+	border-radius: 2px;
+}
+
+/* small hover touch */
+#nav_list .nav-item a:hover { 
+	color: var(--brand); 
+	opacity: 0.9; 
+}
+
+/* make logo size consistent and vertically centered */
+#nav_img {
+	height:84px;
+	max-height:84px;
+	width:auto;
+	display:block;
+}
+
+/* appointment button size */
+#nav-right .btn-default {
+	height:44px;
+	padding:10px 16px;
+}
+
+/* ========================================
+   MOBILE MENU STYLES
+   ======================================== */
+
+#mobile_btn { 
+    display:none; 
+    background:transparent; 
+    border:none; 
+    font-size:1.5rem;
+    cursor:pointer;
+    color: var(--brand);
+    padding: 8px;
+    transition: opacity 0.3s ease;
+}
+
+#mobile_btn:hover {
+    opacity: 0.7;
+}
+
+/* Mobile menu dropdown */
+#mobile_menu { 
+    display:none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.98);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    padding: 24px 6%;
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 999;
+}
+
+#mobile_menu.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+#mobile_nav_list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 0 0 24px 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    max-width: 400px;
+}
+
+#mobile_nav_list .nav-item {
+    text-align: center;
+}
+
+#mobile_nav_list .nav-item a {
+    color: var(--brand);
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    display: block;
+    padding: 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+#mobile_nav_list .nav-item a:hover {
+    background-color: rgba(144, 80, 73, 0.1);
+}
+
+#mobile_menu .btn-default {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+/* ========================================
+   RESPONSIVE - MOBILE MENU
+   ======================================== */
+
+/* Mobile menu at 1170px breakpoint (same as site exemplo) */
+@media screen and (max-width: 1170px) {
+    /* Hide desktop menu and CTA button */
+    #nav_list { 
+        display: none !important; 
+    }
+    
+    #nav-right .btn-default { 
+        display: none !important; 
+    }
+    
+    /* Show mobile hamburger button */
+    #mobile_btn { 
+        display: block !important; 
+    }
+}
+
+/* Tablet adjustments */
+@media screen and (max-width: 800px) {
+    nav#navbar {
+        height: 80px;
+        padding: 0 4%;
+    }
+    
+    #nav_img {
+        height: 64px;
+        max-height: 64px;
+    }
+}

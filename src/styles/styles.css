@@ -1,0 +1,1017 @@
+:root {
+    --bg: #faedf8;
+    --brand: #905049;
+    --accent: #e6cfd6;
+    --text: #222;
+}
+
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;  /* Previne scroll horizontal */
+}
+
+/* Header styles moved to header.css to avoid conflicts */
+
+.btn-default { 
+    background:var(--brand); 
+    color:#fff; 
+    border:none; 
+    padding:12px 24px; 
+    border-radius:12px; 
+    cursor:pointer; 
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    white-space: nowrap;  /* Previne quebra de texto em 2 linhas */
+    transition: background-color 0.3s ease;
+}
+
+.btn-default:hover {
+    background-color: #7a4039;
+}
+
+/* Mobile menu styles moved to header.css to avoid conflicts */
+
+/* Sections */
+/* Make each section fill the viewport and snap */
+main#content { scroll-snap-type: y mandatory; }
+section { 
+    padding: 48px 6%; 
+    min-height: auto; 
+    scroll-snap-align: start;
+    scroll-margin-top: 100px;  /* Offset for fixed header when navigating */
+}
+section#home { min-height: calc(100vh - 100px); }  /* Adjust for header 100px */
+/* Default section content stacks vertically (title on top, paragraphs below) */
+.section { display:flex; flex-direction:column; align-items:flex-start; justify-content:center; }
+
+/* IMPORTANT: Hero needs to override .section to maintain horizontal layout */
+#home.section {
+    display: flex;
+    flex-direction: row !important;  /* Override .section's column */
+    align-items: start;
+}
+
+.section-title { color:var(--brand); font-size:2rem; margin-bottom:18px; }
+.section-subtitle { color: #444; font-size:1.25rem; margin-bottom:12px; }
+
+/* Center titles for services section specifically */
+#services .section-title,
+#services .section-subtitle {
+    width: 100%;
+    text-align: center;
+    max-width: 100%;
+}
+
+/* Override flex for services section to allow grid layout */
+#services.section {
+    display: block !important;
+}
+
+.description { color:#333; line-height:1.6; font-size:1.05rem; margin-bottom:18px; }
+
+/* Limit text width for better legibility without affecting card carousels */
+/* Exclude #services and #workshops from max-width to allow full centering */
+.section .section-title:not(#services .section-title):not(#workshops .section-title),
+.section .section-subtitle:not(#services .section-subtitle):not(#workshops .section-subtitle),
+.section .description {
+    max-width: 680px;
+}
+
+/* For the hero specifically, keep a slightly wider text column */
+/* (Note: width is now controlled by flex % below) */
+
+/* Hero layout: flex like site_exemplo for reliable side-by-side layout */
+#home { 
+    display: flex; 
+    flex-direction: row;
+    min-height: calc(100vh - 100px);  /* Adjust for header height 100px */
+    position: relative;
+    padding: 48px 0 60px 6%;  /* Sem padding direito para imagem encostar na borda */
+}
+
+#cta { 
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 5%;
+}
+
+/* Specific styling for hero paragraphs */
+#cta .description {
+    margin-bottom: 8px;  /* Reduced from default 18px */
+    line-height: 1.7;    /* Increased line spacing for readability */
+}
+
+.title { 
+    color: var(--brand); 
+    font-size: 3.4rem; 
+    line-height: 1.1; 
+    margin-bottom: 18px; 
+    font-weight: 700; 
+}
+
+#banner {
+    display: flex;
+    align-items: start;
+    justify-content: flex-end;
+    flex: 1;  /* Ocupa espaço restante */
+    z-index: 2;
+    margin-right: 0;  /* Sem margem, encosta naturalmente na borda */
+    margin-left: 40px;  /* Espaçamento entre texto e imagem */
+}
+
+#banner img { 
+    height: 100%; 
+    width: 100%;  /* Ocupa toda largura do container */
+    max-width: none;  /* Remove restrição de largura */
+    object-fit: cover;  /* Cobre o espaço mantendo proporção */
+    object-position: right center;  /* Alinha à direita */
+    border-radius: 0 0 0 50px;  /* Apenas canto inferior esquerdo */
+}
+
+.shape {
+    background-color: var(--accent);
+    width: 50%;
+    height: 85%;  /* Reduzido para não ultrapassar a imagem */
+    position: absolute;
+    border-radius: 40% 30% 0% 20%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+/* Keep home section text left-aligned */
+.home-section #cta { 
+    text-align: left; 
+}
+.home-section .title, 
+.home-section .description { 
+    text-align: left; 
+}
+
+/* About Section - Sobre */
+.sobre-section {
+    background: linear-gradient(45deg, var(--bg) 0%, var(--accent) 100%);
+    padding: 80px 6%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.sobre-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Foto da Iris */
+.sobre-photo {
+    flex: 0 0 380px;
+    position: relative;
+}
+
+.sobre-photo img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 2;
+}
+
+/* Elemento decorativo atrás da foto */
+.photo-decoration {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--brand);
+    border-radius: 20px;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+    opacity: 0.3;
+}
+
+/* Conteúdo de texto */
+.sobre-content {
+    flex: 1;
+    text-align: left;
+}
+
+.sobre-section .section-title {
+    font-size: 2.5rem;
+    color: var(--brand);
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+.sobre-section .description {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: var(--text);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.sobre-section .description:last-child {
+    margin-bottom: 0;
+}
+
+.social-media-buttons { 
+    display: flex; 
+    gap: 18px; 
+    margin-top: 12px; 
+}
+
+.social-media-buttons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 40px;
+    background-color: var(--color-neutral-0, #fff);
+    font-size: 1.25rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--brand);
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow .3s ease;
+}
+
+.social-media-buttons a:hover {
+    box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cards / Grid layout (like site exemplo) */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 360px);  /* Colunas fixas de 360px */
+    gap: 32px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 24px 0;
+    justify-content: center;  /* Centraliza as colunas do grid */
+}
+
+.card { 
+    width: 360px;  /* Largura fixa */
+    max-width: 100%;  /* Responsivo em telas pequenas */
+    background: #fff; 
+    border-radius: 12px; 
+    padding: 18px; 
+    text-align: center; 
+    box-shadow: 0 12px 32px rgba(0,0,0,0.12); 
+    display: flex; 
+    flex-direction: column; 
+    height: 580px;  /* Aumentado para acomodar botão */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+}
+
+.card .tarot-image { width: 100%; height: 220px; object-fit: cover; border-radius: 12px; flex: 0 0 220px; }
+.card .card-body { display: flex; flex-direction: column; justify-content: space-between; flex: 1 1 auto; padding-top: 12px; gap: 12px; }
+.card .tarot-title { margin: 0 0 8px 0; }
+.card .tarot-description { color: #444; flex: 1; }
+
+/* Service Prices */
+.service-price {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 2px solid var(--accent);
+}
+
+.price-normal {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--brand);
+}
+
+.price-solidarity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 1.1rem;
+}
+
+.price-solidarity .badge {
+    background: var(--accent);
+    color: var(--brand);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.price-solidarity .price {
+    font-weight: 600;
+    color: var(--text);
+}
+
+.price-consult {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--brand);
+    font-style: italic;
+}
+
+/* Botão Adquirir nos cards */
+.btn-adquirir {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 12px;
+    background: var(--brand);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-adquirir:hover {
+    background-color: #7a4039;
+    transform: translateY(-2px);
+}
+
+/* Programa Solidário Message */
+.programa-solidario {
+    text-align: center;
+    max-width: 800px;
+    margin: 32px auto 0;
+    padding: 20px 32px;
+    background: rgba(230, 207, 214, 0.3);
+    border-radius: 12px;
+    border-left: 4px solid var(--brand);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text);
+}
+
+.programa-solidario strong {
+    color: var(--brand);
+}
+
+/* Reveal animations */
+.revealable { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
+.section.revealed .revealable { opacity: 1; transform: none; }
+
+/* stagger cards when section revealed */
+.section.revealed .cards-grid .card .revealable { transition-property: opacity, transform; }
+.card h3 { margin:14px 0 10px; color:var(--brand); font-size:1.2rem; }
+.card .tarot-description, .card-desc { font-size:1.05rem; color:#444; }
+
+/* Separador de Seções */
+.section-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 6%;
+    position: relative;
+}
+
+.section-divider::before,
+.section-divider::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--brand), transparent);
+    max-width: 300px;
+}
+
+.section-divider::before {
+    margin-right: 30px;
+}
+
+.section-divider::after {
+    margin-left: 30px;
+}
+
+.divider-icon {
+    color: var(--brand);
+    font-size: 1.5rem;
+    opacity: 0.8;
+}
+
+/* Workshops Section - Oficinas Terapêuticas */
+.workshops-section {
+    display: block !important;  /* Override .section flex */
+    padding: 80px 6%;
+}
+
+.workshops-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.workshops-section .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--brand);
+    margin-bottom: 16px;
+    max-width: 100% !important;  /* Override the general max-width rule */
+}
+
+.workshops-section .section-subtitle {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #666;
+    margin-bottom: 0;
+    max-width: 100% !important;  /* Override the general max-width rule */
+}
+
+.workshop-panel {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.workshop-item {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    background: linear-gradient(120deg, rgba(250, 237, 248, 0.5) 0%, rgba(230, 207, 214, 0.3) 100%);
+    padding: 60px 5%;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.workshop-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+}
+
+.workshop-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.workshop-image {
+    flex: 0 0 45%;
+    position: relative;
+}
+
+.workshop-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.workshop-item:hover .workshop-image img {
+    transform: scale(1.03);
+}
+
+.workshop-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.workshop-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--brand);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    box-shadow: 0 4px 12px rgba(144, 80, 73, 0.3);
+}
+
+.workshop-title {
+    font-size: 2rem;
+    color: var(--brand);
+    margin: 0;
+    font-weight: 700;
+}
+
+.workshop-highlight {
+    font-size: 1.15rem;
+    font-style: italic;
+    color: var(--brand);
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    border-left: 4px solid var(--brand);
+    border-radius: 8px;
+    line-height: 1.6;
+}
+
+.workshop-highlight i {
+    font-size: 0.9rem;
+    opacity: 0.5;
+}
+
+.workshop-highlight .fa-quote-left {
+    margin-right: 6px;
+}
+
+.workshop-highlight .fa-quote-right {
+    margin-left: 6px;
+}
+
+.workshop-description {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text);
+    margin: 0;
+}
+
+.workshop-details {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.workshop-details span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    color: #666;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 8px 16px;
+    border-radius: 20px;
+}
+
+.workshop-details i {
+    color: var(--brand);
+    font-size: 1rem;
+}
+
+/* Botão nas oficinas */
+.btn-workshop {
+    display: inline-block;
+    padding: 14px 32px;
+    margin-top: 24px;
+    background: var(--brand);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(144, 80, 73, 0.2);
+}
+
+.btn-workshop:hover {
+    background-color: #7a4039;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(144, 80, 73, 0.3);
+}
+
+/* Books Section - Livro Digital */
+.livro-digital {
+    min-height: calc(100vh - 100px) !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--bg) 0%, var(--accent) 100%);
+}
+
+.livro-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 48px 6%;
+}
+
+.livro-digital .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--brand);
+    margin-bottom: 48px;
+}
+
+.livro-content {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+.livro-image {
+    flex: 0 0 300px;
+}
+
+.livro-capa {
+    width: 300px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+}
+
+.livro-capa:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+}
+
+.livro-info {
+    flex: 1;
+    max-width: 600px;
+}
+
+.sobre-livro {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--brand);
+    margin: 0 0 24px 0;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.5);
+    border-left: 4px solid var(--brand);
+    border-radius: 8px;
+    position: relative;
+}
+
+.sobre-livro i {
+    font-size: 1rem;
+    opacity: 0.5;
+}
+
+.sobre-livro .fa-quote-left {
+    margin-right: 8px;
+}
+
+.sobre-livro .fa-quote-right {
+    margin-left: 8px;
+}
+
+.livro-description {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--text);
+    margin-bottom: 32px;
+}
+
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--brand);
+    color: #fff;
+    padding: 16px 32px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    box-shadow: 0 8px 16px rgba(144, 80, 73, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-download:hover {
+    background: #7a4039;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(144, 80, 73, 0.4);
+}
+
+.btn-download i {
+    font-size: 1.3rem;
+}
+
+/* Contact Section */
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#contact .description {
+    margin-bottom: 24px;
+}
+
+#contact .btn-default {
+    margin-top: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--accent);
+    position: relative;
+    margin-top: -1px; /* Remove gap between content and footer */
+}
+
+.footer-wave {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: -5px; /* Remove gap below SVG */
+}
+
+#footer_items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 8% 40px 8%;
+    background-color: var(--accent);
+}
+
+#copyright {
+    color: var(--brand);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1170px) {
+    /* Header responsive rules moved to header.css */
+    
+    #home {
+        min-height: 100%;
+        padding-top: 24px;
+        flex-direction: column;
+    }
+
+    #banner,
+    #banner img,
+    #home .shape {
+        display: none;
+    }
+
+    #cta {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .title {
+        font-size: 2.8rem;
+    }
+
+    /* Sobre section responsive - tablet */
+    .sobre-section {
+        padding: 60px 6%;
+    }
+    
+    .sobre-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .sobre-photo {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .sobre-photo img {
+        height: 420px;
+    }
+    
+    .sobre-content {
+        text-align: center;
+    }
+
+    .sobre-section .section-title {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .sobre-section .description {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    /* Workshops section responsive - tablet */
+    .workshops-section {
+        padding: 60px 6%;
+    }
+
+    .workshop-panel {
+        gap: 60px;
+    }
+
+    .workshop-item {
+        flex-direction: column !important;  /* Force column on tablet */
+        padding: 40px 5%;
+        gap: 30px;
+    }
+
+    .workshop-image {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .workshop-image img {
+        height: 350px;
+    }
+
+    .workshop-title {
+        font-size: 1.8rem;
+    }
+
+    /* Livro section responsive */
+    .livro-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .livro-image {
+        flex: 0 0 auto;
+    }
+
+    .livro-info {
+        text-align: center;
+    }
+
+    /* Cards grid responsive - tablet */
+    .cards-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+    }
+
+    .card {
+        min-width: 280px;
+        height: 600px;  /* Aumentado para melhor acomodação do botão em todos os tamanhos */
+    }
+
+    .programa-solidario {
+        font-size: 1rem;
+        padding: 16px 24px;
+    }
+}
+
+@media (max-width: 800px) {
+    /* Menu mobile já ativado em 1170px, aqui apenas ajustes de tamanho */
+    /* Header adjustments moved to header.css */
+    
+    .title { font-size:2.4rem; }
+    
+    /* Cards grid mobile - 1 column */
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card { 
+        min-width: 100%;
+        height: 540px;  /* Ajustado para acomodar botão em mobile */
+    }
+
+    .card .tarot-image {
+        height: 200px;
+        flex: 0 0 200px;
+    }
+
+    .price-normal {
+        font-size: 1.5rem;
+    }
+
+    .price-solidarity {
+        font-size: 1rem;
+    }
+
+    .price-consult {
+        font-size: 1.1rem;
+    }
+
+    .programa-solidario {
+        font-size: 0.95rem;
+        padding: 16px 20px;
+        margin: 24px auto 0;
+    }
+
+    /* Workshops section mobile */
+    .workshops-section {
+        padding: 48px 6%;
+    }
+
+    .workshops-section .section-title {
+        font-size: 1.8rem;
+    }
+
+    .workshops-section .section-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 40px;
+    }
+
+    .workshop-panel {
+        gap: 40px;
+    }
+
+    .workshop-item {
+        padding: 30px 5%;
+        gap: 24px;
+    }
+
+    .workshop-image img {
+        height: 280px;
+    }
+
+    .workshop-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .workshop-title {
+        font-size: 1.5rem;
+    }
+
+    .workshop-highlight {
+        font-size: 1rem;
+        padding: 16px;
+    }
+
+    .workshop-description {
+        font-size: 0.95rem;
+    }
+
+    .workshop-details {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .workshop-details span {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+    
+    /* Sobre section mobile */
+    .sobre-section {
+        padding: 48px 6%;
+    }
+    
+    .sobre-photo {
+        max-width: 320px;
+    }
+    
+    .sobre-photo img {
+        height: 360px;
+    }
+    
+    .photo-decoration {
+        top: 15px;
+        left: 15px;
+    }
+
+    .sobre-section .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 24px;
+    }
+
+    .sobre-section .description {
+        font-size: 1rem;
+        text-align: left;
+    }
+    
+    /* Livro section mobile */
+    .livro-digital .section-title {
+        font-size: 1.8rem;
+    }
+
+    .livro-capa {
+        width: 250px;
+        height: auto;
+    }
+
+    .sobre-livro {
+        font-size: 1.1rem;
+        padding: 16px;
+    }
+
+    .livro-description {
+        font-size: 1rem;
+    }
+
+    .btn-download {
+        padding: 14px 24px;
+        font-size: 1rem;
+    }
+    
+    /* Footer responsive */
+    #footer_items {
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
+    }
+}
