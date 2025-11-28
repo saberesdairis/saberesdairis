@@ -1,153 +1,317 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17239773421"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-17239773421');
-    </script>
-
-    <meta name="google-site-verification" content="j9dM7H9oVxWftC9spRG17DASjMU2DQCvLKnOWb3LE5Q" />
-    <meta charset="UTF-8" />
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Saberes da Iris</title>
-    <link rel="stylesheet" href="style.css" />
-    <meta name="description" content="Saberes da Iris - Terapias e Alquimias do Feminino. Atendimentos com Tarot, culinária terapêutica e oficinas criativas. Brasileiras na Alemanha.">
-    <meta name="keywords" content="terapias, tarot, burghausen, saberes da iris, brasileiras na alemanha, culinária terapêutica, espiritualidade">
-    <meta name="author" content="Iris Raab">
-    <meta name="robots" content="index, follow">
-  </head>
-  <body>
-    <header class="topo">
-      <div class="logo">🌿 Saberes da Iris</div>
-      <nav class="menu">
-        <a href="#inicio">Início</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#oficinas">Oficinas</a>
-        <a href="#livro">Livro</a>
-        <a href="#contato">Contato</a>
-      </nav>
+    <link rel="icon" type="image/png" href="src/images/favicon.ico">
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <link rel="stylesheet" href="src/styles/header.css">
+    <link rel="stylesheet" href="src/styles/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div id="nav-left">
+                <img id="nav_img" src="src/images/saberes-da-iris-removebg-preview.png" alt="Saberes da Íris logo">
+                <ul id="nav_list">
+                <li class="nav-item active"><a href="#home">Início</a></li>
+                <li class="nav-item"><a href="#about">Sobre</a></li>
+                <li class="nav-item"><a href="#services">Serviços</a></li>
+                <li class="nav-item"><a href="#workshops">Oficinas</a></li>
+                <li class="nav-item"><a href="#books">Livros</a></li>
+                <li class="nav-item"><a href="#contact">Contato</a></li>
+                </ul>
+            </div>
+
+            <div id="nav-right">
+                <a href="https://wa.me/491637656079?text=Olá!%20Vim%20do%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener noreferrer" class="btn-default">Agende uma consulta!</a>
+                <button id="mobile_btn" aria-label="Abrir menu móvel"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </nav>
+
+            <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item"><a href="#home">Início</a></li>
+                <li class="nav-item"><a href="#about">Sobre</a></li>
+                <li class="nav-item"><a href="#services">Serviços</a></li>
+                <li class="nav-item"><a href="#workshops">Oficinas</a></li>
+                <li class="nav-item"><a href="#books">Livros</a></li>
+                <li class="nav-item"><a href="#contact">Contato</a></li>
+            </ul>
+            <a href="https://wa.me/491637656079?text=Olá!%20Vim%20do%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener noreferrer" class="btn-default">Agende uma consulta!</a>
+        </div>
     </header>
 
-    <section class="hero" id="inicio">
-      <div class="hero-conteudo">
-        <img src="img/logo_saberes_iris.jpg" alt="Logo Saberes da Iris" class="hero-logo" />
-        <h1>Saberes da Iris</h1>
-        <h2>Terapias e Alquimias do Feminino</h2>
-        <p>Reconecte-se consigo mesma através de terapias espirituais, arte e culinária terapêutica. Um espaço sagrado para brasileiras na Alemanha.</p>
-        <a class="botao-hero" href="https://wa.me/4916376560079" target="_blank">Agendar via WhatsApp</a>
-      </div>
-    </section>
+    <main id="content">
+    <section id="home" class="section home-section">
+            <div class="shape"></div>
+            <div id="cta">
+                <h1 class="title">
+                Terapias e Alquimias do Feminino
+                </h1>
+               <p class="description">
+               Aqui, honramos a força, a sensibilidade e a sabedoria do feminino.
+               Este é um portal de reconexão com sua essência, através de terapias espirituais, arte intuitiva, alquimias naturais e culinária terapêutica.           
+                </p>
+               <p class="description">
+               Se você é uma brasileira na Alemanha em busca de acolhimento, cura e reconexão, encontrou o seu lugar.
+               Sinta-se envolvida por aromas, símbolos e saberes que despertam memórias ancestrais e despertam sua potência interior. 
+           </p>
+                <div class="social-media-buttons">
+                    <a href="https://wa.me/491637656079" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                     <a href="https://www.instagram.com/saberesdairis?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@saberesdairis" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+            <div id="banner"><img src="src/images/made-with-insmind-teste-imagem.png" alt="Banner"></div>
+        </section>
 
-    <main>
-      <section id="sobre" class="secao">
-        <h2>Minha Jornada</h2>
-        <p>Minha jornada começou dando palestras de autoconhecimento e espiritualidade em comunidades no Brasil. Sempre acreditei que o conhecimento espiritual deve ser acessível a todos.</p>
-        <p>Durante a pandemia, desenvolvi metodologias únicas que combinam terapia espiritual com arte e culinária terapêutica. Hoje, em Burghausen, ajudo brasileiras a se reconectarem com sua essência.</p>
-      </section>
+        <section id="about" class="section sobre-section">
+            <div class="sobre-container">
+                <div class="sobre-photo">
+                    <img src="src/images/foto-iris.jpg" alt="Iris - Terapeuta e Facilitadora">
+                    <div class="photo-decoration"></div>
+                </div>
+                <div class="sobre-content">
+                    <h2 class="section-title">Sobre</h2>
+                    <p class="description">
+                   Minha jornada começou dando palestras de autoconhecimento e espiritualidade em comunidades no Brasil. Sempre acreditei que o conhecimento espiritual deve ser acessível a todos.
+                   Durante a pandemia, desenvolvi metodologias únicas que combinam terapia espiritual com arte e culinária terapêutica. Hoje, em Burghausen, ajudo brasileiras a se reconectarem com sua essência.
+                    </p>
+                    <p class="description">
+                    Com esse propósito, criei o Programa Solidário, uma iniciativa comunitária que oferece acesso aos meus serviços com valores reduzidos, tornando o cuidado espiritual e emocional mais acessível e promovendo redes de apoio entre mulheres.
+                    Esse programa é um convite à cura coletiva, à partilha e ao acolhimento. Se ficou interessada, entre em contato!
+                    </p>
+                </div>
+            </div>
+        </section>
 
-      <section id="servicos" class="secao">
-        <h2>Serviços Oferecidos</h2>
+        <section id="services" class="section">
+            <h2 class="section-title">Serviços</h2>
+            <h3 class="section-subtitle">Venha conferir nossas opções!</h3>
+             
+            <div id="tarots" class="cards-grid" aria-label="Produtos e serviços">
+                <div class="card">
+                    <div class="tarot-heart"><i class="fa-solid fa-heart"></i></div>
+                    <img src="src/images/tarot-medio.jpg" class="tarot-image" alt="Consulta de Tarot">
+                    <div class="card-body">
+                        <h3 class="tarot-title">Consulta de Tarot</h3>
+                        <span class="tarot-description">Um mergulho intuitivo em símbolos e arquétipos. Cada carta revela caminhos, reflexões e possibilidades para sua jornada.</span>
+                        <div class="service-price">
+                            <div class="price-normal">R$ 100</div>
+                            <div class="price-solidarity">
+                                <span class="badge">Solidário</span>
+                                <span class="price">R$ 60</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/491637656079?text=Olá!%20Tenho%20interesse%20na%20*Consulta%20de%20Tarot*.%20Gostaria%20de%20agendar%20um%20horário." target="_blank" rel="noopener noreferrer" class="btn-adquirir">Adquirir</a>
+                    </div>
+                </div>
 
-        <div class="servico">
-          <img src="img/tarot_icon.jpg" alt="Tarot" style="max-width: 80px;">
-          <h3>Consulta de Tarot</h3>
-          <p>R$ 100 — <strong>Solidário:</strong> R$ 60</p>
+                <div class="card">
+                    <div class="tarot-heart"><i class="fa-solid fa-heart"></i></div>
+                    <img src="src/images/tarot-medio.jpg" class="tarot-image" alt="Baralho Cigano">
+                    <div class="card-body">
+                        <h3 class="tarot-title">Baralho Cigano</h3>
+                        <span class="tarot-description">Sabedoria ancestral em cada carta. O baralho cigano revela com clareza e sensibilidade os movimentos da sua vida.</span>
+                        <div class="service-price">
+                            <div class="price-normal">R$ 50</div>
+                            <div class="price-solidarity">
+                                <span class="badge">Solidário</span>
+                                <span class="price">R$ 35</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/491637656079?text=Olá!%20Tenho%20interesse%20no%20*Baralho%20Cigano*.%20Gostaria%20de%20agendar%20um%20horário." target="_blank" rel="noopener noreferrer" class="btn-adquirir">Adquirir</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="tarot-heart"><i class="fa-solid fa-heart"></i></div>
+                    <img src="src/images/pacote_alma_icon.jpg" class="tarot-image" alt="Pacote Alma">
+                    <div class="card-body">
+                        <h3 class="tarot-title">Pacote Alma</h3>
+                        <span class="tarot-description">Consiste em um atendimento individualizado, em que trataremos questões profundas que afetam diretamente a alma do consulente.</span>
+                        <div class="service-price">
+                            <div class="price-normal">R$ 150</div>
+                            <div class="price-solidarity">
+                                <span class="badge">Solidário</span>
+                                <span class="price">R$ 90</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/491637656079?text=Olá!%20Tenho%20interesse%20no%20*Pacote%20Alma*.%20Gostaria%20de%20agendar%20um%20horário." target="_blank" rel="noopener noreferrer" class="btn-adquirir">Adquirir</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="tarot-heart"><i class="fa-solid fa-heart"></i></div>
+                    <img src="src/images/atendimento_terapeutico.png" class="tarot-image" alt="Atendimento Terapêutico">
+                    <div class="card-body">
+                        <h3 class="tarot-title">Atendimento Terapêutico</h3>
+                        <span class="tarot-description">Sessões de acolhimento e cura emocional. Um espaço seguro para reconexão com seu bem-estar e equilíbrio interior.</span>
+                        <div class="service-price">
+                            <div class="price-consult">Sob consulta</div>
+                        </div>
+                        <a href="https://wa.me/491637656079?text=Olá!%20Tenho%20interesse%20no%20*Atendimento%20Terapêutico*.%20Gostaria%20de%20saber%20mais%20informações." target="_blank" rel="noopener noreferrer" class="btn-adquirir">Consultar</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="tarot-heart"><i class="fa-solid fa-heart"></i></div>
+                    <img src="src/images/atendimento-e-sessao.jpg" class="tarot-image" alt="Sessões de Libertação">
+                    <div class="card-body">
+                        <h3 class="tarot-title">Sessões de Libertação</h3>
+                        <span class="tarot-description">Processo profundo de liberação energética e emocional. Transforme padrões limitantes e recupere sua essência luminosa.</span>
+                        <div class="service-price">
+                            <div class="price-normal">R$ 150</div>
+                            <div class="price-solidarity">
+                                <span class="badge">Solidário</span>
+                                <span class="price">R$ 90</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/491637656079?text=Olá!%20Tenho%20interesse%20nas%20*Sessões%20de%20Libertação*.%20Gostaria%20de%20agendar%20um%20horário." target="_blank" rel="noopener noreferrer" class="btn-adquirir">Adquirir</a>
+                    </div>
+                </div>
+            </div>
+
+            <p class="programa-solidario">
+                🌱 <strong>Programa Solidário:</strong> Acreditamos que a cura deve ser acessível a todas. 
+                Valores reduzidos para promover redes de apoio e acolhimento entre mulheres. Se ficou interessada, entre em contato!
+            </p>
+        </section>
+
+        <!-- Separador entre Serviços e Oficinas -->
+        <div class="section-divider">
+            <span class="divider-icon">✦</span>
         </div>
 
-        <div class="servico">
-          <img src="img/tarot_icon.jpg" alt="Baralho Cigano" style="max-width: 80px;">
-          <h3>Baralho Cigano</h3>
-          <p>R$ 50 — <strong>Solidário:</strong> R$ 35</p>
-        </div>
+        <section id="workshops" class="section workshops-section">
+            <div class="workshops-header">
+                <h2 class="section-title">Oficinas Terapêuticas</h2>
+                <h3 class="section-subtitle">Experiências transformadoras de cura e criação</h3>
+            </div>
+             
+            <div class="workshop-panel">
+                <!-- Oficina 1: Cozinha Terapêutica -->
+                <div class="workshop-item">
+                    <div class="workshop-image">
+                        <img src="src/images/cozinha_terapeutica.png" alt="Cozinha terapêutica">
+                    </div>
+                    <div class="workshop-info">
+                        <div class="workshop-icon">
+                            <i class="fa-solid fa-utensils"></i>
+                        </div>
+                        <h3 class="workshop-title">Cozinha Terapêutica</h3>
+                        <div class="workshop-highlight">
+                            <i class="fa-solid fa-quote-left"></i>
+                            "Alquimia e culinária afetiva em um espaço de nutrição do corpo e da alma"
+                            <i class="fa-solid fa-quote-right"></i>
+                        </div>
+                        <p class="workshop-description">
+                            Uma jornada sensorial que une o preparo de alimentos com processos de cura emocional. 
+                            Através da culinária consciente, reconectamos com nossas raízes, memórias afetivas e 
+                            o poder transformador dos alimentos naturais.
+                        </p>
+                        <div class="workshop-details">
+                            <span><i class="fa-solid fa-clock"></i> Vivência de 2-3 horas</span>
+                            <span><i class="fa-solid fa-users"></i> Grupos pequenos</span>
+                        </div>
+                        <a href="https://wa.me/491637656079?text=Olá!%20Tenho%20interesse%20na%20oficina%20de%20*Cozinha%20Terapêutica*.%20Gostaria%20de%20saber%20datas%20e%20valores." target="_blank" rel="noopener noreferrer" class="btn-workshop">Tenho Interesse</a>
+                    </div>
+                </div>
 
-        <div class="servico">
-          <img src="img/pacote_alma_icon.jpg" alt="Pacote Alma" style="max-width: 80px;">
-          <h3>Pacote Alma</h3>
-          <p>R$ 150 — <strong>Solidário:</strong> R$ 90</p>
-        </div>
+                <!-- Oficina 2: Artes Terapêuticas -->
+                <div class="workshop-item reverse">
+                    <div class="workshop-image">
+                        <img src="src/images/oficina-terapeutica.jpg" alt="Artes terapêuticas">
+                    </div>
+                    <div class="workshop-info">
+                        <div class="workshop-icon">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+                        <h3 class="workshop-title">Artes Terapêuticas</h3>
+                        <div class="workshop-highlight">
+                            <i class="fa-solid fa-quote-left"></i>
+                            "Processos criativos que fortalecem autoestima e expressão emocional"
+                            <i class="fa-solid fa-quote-right"></i>
+                        </div>
+                        <p class="workshop-description">
+                            Explore sua criatividade como ferramenta de autoconhecimento e cura. 
+                            Através da arte intuitiva, desbloqueamos emoções, fortalecemos a autoestima 
+                            e descobrimos novas formas de expressar nossa essência.
+                        </p>
+                        <div class="workshop-details">
+                            <span><i class="fa-solid fa-clock"></i> Encontros semanais</span>
+                            <span><i class="fa-solid fa-users"></i> Todos os níveis</span>
+                        </div>
+                        <a href="https://wa.me/491637656079?text=Olá!%20Tenho%20interesse%20na%20oficina%20de%20*Artes%20Terapêuticas*.%20Gostaria%20de%20saber%20datas%20e%20valores." target="_blank" rel="noopener noreferrer" class="btn-workshop">Tenho Interesse</a>
+                    </div>
+                </div>
+            </div>
 
-        <div class="servico">
-          <img src="img/therapy_icon.jpg" alt="Terapia" style="max-width: 80px;">
-          <h3>Atendimento Terapêutico</h3>
-          <p>Consulte valores</p>
-        </div>
+            <p class="programa-solidario">
+                🌿 Valores flexíveis conforme o Programa Solidário.
+            </p>
+        </section>
 
-        <div class="servico">
-          <img src="img/therapy_icon.jpg" alt="Libertação" style="max-width: 80px;">
-          <h3>Sessões de Libertação</h3>
-          <p>R$ 150 — <strong>Solidário:</strong> R$ 90</p>
-        </div>
+        <section id="books" class="section livro-digital">
+            <div class="livro-container">
+                <h2 class="section-title">Livro Digital: Vales do Silêncio</h2>
+                
+                <div class="livro-content">
+                    <div class="livro-image">
+                        <img src="src/images/livro-capa.jpg" alt="Capa do livro Vales do Silêncio" class="livro-capa">
+                    </div>
+                    
+                    <div class="livro-info">
+                        <blockquote class="sobre-livro">
+                            <i class="fa-solid fa-quote-left"></i>
+                            "Este não é apenas um conto. É um sonho que ficou guardado por seis anos..."
+                            <i class="fa-solid fa-quote-right"></i>
+                        </blockquote>
+                        <p class="livro-description">Um conto mítico sobre escuta, guerra e reconciliação entre povos ancestrais.</p>
+                        <a href="src/files/vales-do-silencio.pdf" download="vales-do-silencio.pdf" target="_blank" rel="noopener noreferrer" class="btn-download">
+                            <i class="fa-solid fa-download"></i> Baixar eBook Gratuito
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <p class="programa-solidario">
-          🌱 Este site valoriza o acesso à cura: conheça o <strong>Programa Solidário</strong>.
-        </p>
-      </section>
-
-      <section id="oficinas" class="secao">
-        <h2>Oficinas Terapêuticas</h2>
-
-        <div class="servico">
-          <img src="img/workshops_icon.jpg" alt="Cozinha Terapêutica" style="max-width: 80px;">
-          <h3>Cozinha Terapêutica</h3>
-          <p>Oficina que une alquimia e culinária afetiva. Um espaço de nutrição do corpo e da alma.</p>
-        </div>
-
-        <div class="servico">
-          <img src="img/workshops_icon.jpg" alt="Artes Terapêuticas" style="max-width: 80px;">
-          <h3>Artes Terapêuticas</h3>
-          <p>Processos criativos para fortalecer autoestima e expressão emocional.</p>
-        </div>
-
-        <p class="programa-solidario">
-          🌿 Valores flexíveis conforme o Programa Solidário.
-        </p>
-      </section>
-
-      <section id="livro" class="livro-digital">
-        <h2>Livro Digital: Vales do Silêncio</h2>
-        <img src="img/livro_capa.jpg" alt="Capa do livro Vales do Silêncio" class="livro-capa" />
-        <blockquote class="sobre-livro">“Este não é apenas um conto. É um sonho que ficou guardado por seis anos...”</blockquote>
-        <p>Um conto mítico sobre escuta, guerra e reconciliação entre povos ancestrais.</p>
-       <a href="docs/vales-do-silencio.pdf" download class="botao-download">📥 Baixar eBook</a>
-      </section>
-
-      <section id="contato" class="secao">
-        <h2>Contato</h2>
-        <p>Entre em contato para agendamentos, dúvidas ou parcerias. Você pode me chamar diretamente pelo WhatsApp ou pelas redes sociais.</p>
-        <ul>
-          <li><strong>WhatsApp:</strong> <a href="https://wa.me/4916376560079" target="_blank">+49 163 7656079</a></li>
-          <li><strong>Email:</strong> <a href="mailto:saberesdairis@gmail.com">saberesdairis@gmail.com</a></li>
-          <li><strong>Instagram:</strong> <a href="https://instagram.com/saberesdairis" target="_blank">@saberesdairis</a></li>
-          <li><strong>TikTok:</strong> <a href="https://tiktok.com/@saberesdairis" target="_blank">@saberesdairis</a></li>
-        </ul>
-
-        <form class="formulario" action="https://formsubmit.co/saberesdairis@gmail.com" method="POST">
-          <input type="hidden" name="_next" value="https://saberesdairis.com.br/obrigada.html">
-          <input type="text" name="name" placeholder="Seu nome" required />
-          <input type="email" name="email" placeholder="Seu email" required />
-          <textarea name="message" placeholder="Sua mensagem" required></textarea>
-          <button type="submit">Enviar</button>
-        </form>
-      </section>
+        <section id="contact" class="section">
+            <h2 class="section-title">Contato</h2>
+            <p class="description">Entre em contato via WhatsApp ou Instagram.</p>
+            <a href="https://wa.me/491637656079?text=Olá!%20Vim%20do%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener noreferrer" class="btn-default">Agende uma consulta!</a>
+        </section>
     </main>
 
-    <footer class="rodape">
-      <div class="rodape-conteudo">
-        <p>🌸 Saberes da Iris — Terapias e Alquimias do Feminino</p>
-        <nav class="rodape-menu">
-          <a href="#inicio">Início</a>
-          <a href="#sobre">Sobre</a>
-          <a href="#servicos">Serviços</a>
-          <a href="#oficinas">Oficinas</a>
-          <a href="#livro">Livro</a>
-          <a href="#contato">Contato</a>
-        </nav>
-        <p class="creditos">Desenvolvido com carinho por Iris & Idee 🌿</p>
-      </div>
+    <footer>
+        <div id="footer_items">
+            <span id="copyright">
+                &copy; 2025 Saberes da Íris - Todos os direitos reservados
+            </span>
+
+            <div class="social-media-buttons">
+                <a href="https://wa.me/491637656079" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="https://www.instagram.com/saberesdairis?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@saberesdairis" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
     </footer>
-  </body>
+
+    <script src="src/javascript/script.js"></script>
+</body>
 </html>
